@@ -3,8 +3,6 @@
 ## Goal
 Locate and retrieve the password for the next level.
 
----
-
 ## Enumeration
 
 Commands used:
