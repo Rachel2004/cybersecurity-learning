@@ -1,0 +1,40 @@
+# Sensitive files
+*.env
+*.token
+*.secret
+*.key
+*.pem
+
+# Logs
+*.log
+
+# Linux/Vim swap files
+*.swp
+*~
+
+# Python cache
+__pycache__/
+
+# VS Code settings
+.vscode/
+
+# Burp Suite files
+*.burp
+*.burpsuite
+
+# Virtual machines
+*.ova
+*.vdi
+*.vmdk
+
+# Packet captures
+*.pcap
+*.pcapng
+
+# Temporary files
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
