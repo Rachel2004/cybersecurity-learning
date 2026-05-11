@@ -3,8 +3,6 @@
 ## Goal
 Analyze the SUID binary `printfile` and exploit its behavior to access the next level password.
 
----
-
 ## Enumeration
 
 Commands used:
@@ -14,8 +12,6 @@ ls -la
 file printfile
 ltrace ./printfile
 ```
-
----
 
 ## Key Findings
 
@@ -36,8 +32,6 @@ This indicated that:
 
 The use of `system()` suggested possible shell interpretation vulnerabilities.
 
----
-
 ## Investigation
 
 The binary checked access permissions on the provided argument before executing:
@@ -49,8 +43,6 @@ The binary checked access permissions on the provided argument before executing:
 Because the command was passed through the shell, spaces inside the argument were interpreted as separate filenames.
 
 This created an opportunity to bypass the intended access restrictions.
-
----
 
 ## Exploitation
 
@@ -85,8 +77,6 @@ This caused:
 - `a` to satisfy the access check
 - `b` to be interpreted as a second file argument
 - the password file to be read with elevated privileges
-
----
 
 ## Lessons Learned
 

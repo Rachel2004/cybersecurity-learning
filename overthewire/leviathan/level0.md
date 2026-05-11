@@ -13,8 +13,6 @@ cd .backup
 ls -la
 ```
 
----
-
 ## Key Findings
 
 A hidden directory named `.backup` contained a file called:
@@ -24,8 +22,6 @@ bookmarks.html
 ```
 
 This suggested there may be useful information stored inside the file.
-
----
 
 ## Investigation
 
@@ -37,13 +33,9 @@ cat bookmarks.html | grep -i password
 
 This revealed a line containing credentials for the next level.
 
----
-
 ## Exploitation
 
 The password for the next level was successfully recovered from the HTML file.
-
----
 
 ## Lessons Learned
 

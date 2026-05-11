@@ -3,8 +3,6 @@
 ## Goal
 Analyze the SUID binary `check` and gain access to the next level.
 
----
-
 ## Enumeration
 
 Commands used:
@@ -14,8 +12,6 @@ ls -la
 file check
 strings check
 ```
-
----
 
 ## Key Findings
 
@@ -38,8 +34,6 @@ This suggested:
 - the program compares user input with a hardcoded value
 - successful authentication may spawn a shell
 
----
-
 ## Investigation
 
 To observe the program behavior dynamically, I used:
@@ -59,8 +53,6 @@ This confirmed:
 - the password comparison used `strcmp`
 - the binary executed `/bin/sh` after successful authentication
 
----
-
 ## Exploitation
 
 After entering the correct password, a shell was spawned.
@@ -78,8 +70,6 @@ The password for the next level was then retrieved from:
 ```bash
 cat /etc/leviathan_pass/leviathan2
 ```
-
----
 
 ## Lessons Learned
 
